@@ -50,6 +50,11 @@
   </head>
   <body>
     <form action="process.php" method="get">
+      <?php
+        $host = gethostname();
+        $host = gethostbyname($host);
+        echo "<h1 style='text-align: center; margin: 32px 0;'>HOST IP: $host</h1>";
+      ?>
       <label for="origin">Origin: <input type="text" name="origin" id="origin" /></label>
       <label for="dest">Destination: <input type="text" name="dest" id="dest"></label>
       <button type="submit">Submit</button>
